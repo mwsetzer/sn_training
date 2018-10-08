@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="What needed values" max_length="40" name="x_278456_needit_what_needed_values" type="collection">
+        <element label="id" max_length="40" name="id" type="string"/>
+        <element label="label" max_length="40" name="label" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element choice="3" dependent="u_request_type_id" dependent_on_field="u_request_type_id" label="Request type id" mandatory="true" max_length="40" name="u_request_type_id" reference="x_278456_needit_request_types" type="reference" use_dependent_field="true">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

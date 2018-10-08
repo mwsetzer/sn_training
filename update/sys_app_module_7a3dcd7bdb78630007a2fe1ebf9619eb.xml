@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="What needed values">3a3dcd7bdb78630007a2fe1ebf9619e9</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>What needed values</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_278456_needit_what_needed_values</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_278456_needit.what_needed_values_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-03 22:37:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7a3dcd7bdb78630007a2fe1ebf9619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>What needed values</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
+        <sys_update_name>sys_app_module_7a3dcd7bdb78630007a2fe1ebf9619eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-03 22:37:53</sys_updated_on>
+        <timeline_page/>
+        <title>What needed values</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set what needed value based on request type</description>
+        <field>u_request_type</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set what needed</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	//constants
+	var whatNeeded = 'u_what_needed';
+	
+	//add options to formElem based on the the property of this object that matches the selected newValue
+	Object.prototype.addOptionsToDropdown = function(formElem,label,id){
+		g_form.clearOptions(formElem);
+		if (this[newValue] !== null) {
+			for (var iter = 0; iter < this[newValue].length; iter++){
+				g_form.addOption(formElem,this[newValue][iter][label],this[newValue][iter][id]);
+			}
+		}
+	};
+	
+	var requestsTypes = {
+		'hr' : [
+			{
+				'label': 'hr1',
+				'id'   : 'Human Resources 1'
+			},
+			{
+				'label': 'hr2',
+				'id'   : 'Human Resources 2'
+			}
+		],
+		'it' : [
+			{
+				'label': 'it1',
+				'id'   : 'Information Technology 1'
+			},
+			{
+				'label': 'it2',
+				'id'   : 'Information Technology 2'
+			}
+		],
+		'legal' : [
+			{
+				'label': 'legal1',
+				'id'   : 'Legal 1'
+			},
+			{
+				'label': 'legal2',
+				'id'   : 'Legal 2'
+			}
+		],
+		'facilities' : [
+			{
+				'label': 'facilities1',
+				'id'   : 'Facilities 1'
+			},
+			{
+				'label': 'facilities2',
+				'id'   : 'Facilities 2'
+			}
+		]
+	};
+	
+	requestsTypes.addOptionsToDropdown(whatNeeded,'label','id');
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-04 00:37:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7e77e93fdbb8630007a2fe1ebf961945</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>Set what needed</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
+        <sys_update_name>sys_script_client_7e77e93fdbb8630007a2fe1ebf961945</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-05 16:51:00</sys_updated_on>
+        <table>x_278456_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

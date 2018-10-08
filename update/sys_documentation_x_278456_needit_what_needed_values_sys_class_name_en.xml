@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sys_class_name" label="Class" language="en" table="x_278456_needit_what_needed_values">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sys_class_name</element>
+            <help/>
+            <hint/>
+            <label>Class</label>
+            <language>en</language>
+            <name>x_278456_needit_what_needed_values</name>
+            <plural>Class</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 22:37:54</sys_created_on>
+            <sys_id>f63d01bbdb78630007a2fe1ebf96193b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Class</sys_name>
+            <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
+            <sys_update_name>sys_documentation_x_278456_needit_what_needed_values_sys_class_name_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 22:37:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

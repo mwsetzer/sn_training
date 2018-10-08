@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Request types" max_length="40" name="x_278456_needit_request_types" type="collection">
+        <element label="Name" mandatory="true" max_length="40" name="u_name" type="string"/>
+        <element label="Request type id" mandatory="true" max_length="40" name="u_request_type_id" reference="x_278456_needit_what_needed_values" type="string"/>
+    </element>
+</database>
