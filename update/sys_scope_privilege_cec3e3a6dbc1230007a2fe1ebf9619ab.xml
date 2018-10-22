@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-12 22:38:57</sys_created_on>
+        <sys_id>cec3e3a6dbc1230007a2fe1ebf9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SimpleGlideRecordQuery</sys_name>
+        <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
+        <sys_update_name>sys_scope_privilege_cec3e3a6dbc1230007a2fe1ebf9619ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-12 22:38:57</sys_updated_on>
+        <target_name>SimpleGlideRecordQuery</target_name>
+        <target_scope display_value="QueryUtils">b941cfeedb41230007a2fe1ebf961915</target_scope>
+        <target_type>sys_script_include</target_type>
+    </sys_scope_privilege>
+</record_update>

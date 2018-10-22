@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_278456_needit.GetWhatNeededValues</api_name>
+        <client_callable>true</client_callable>
+        <description>Gets the possible What needed values for the provided Request type from the What needed values table</description>
+        <name>GetWhatNeededValues</name>
+        <script><![CDATA[var GetWhatNeededValues = Class.create();
+GetWhatNeededValues.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+		
+	//constants
+	WHAT_NEEDED_TABLE: {value: 'x_278456_needit_what_needed_values',writable: false},
+	REQUEST_TYPE_ID_FIELD: {value: 'u_request_type_id',writable: false},
+	LABEL_FIELD: {value: 'label',writable: false},
+	ID_FIELD: {value: 'id',writable: false},
+	
+	//return the appropriate What needed values for the Request type
+	getWhatNeededValues: function() {
+		
+		var parameters = {
+			//@String - the request type id in the What needed table
+			REQUEST_TYPE: {value: this.getParameter('sysparm_requestType'), writable:false},
+			//@String - the name of the JSON object to pass back to the client script
+		    RETURN_NAME: {value: this.getParameter('sysparm_returnName'), writable:false}
+		};		
+		var values = [];
+		var reqTypeId = new GetRequestType().getRequestTypeSysId(parameters.REQUEST_TYPE.value);
+		var simpleGlideRecordQuery = new x_278456_queryutil.SimpleGlideRecordQuery();
+		var gr = simpleGlideRecordQuery.getSimpleGlideRecordQuery(
+					this.WHAT_NEEDED_TABLE.value,
+					[{
+						'field' : this.REQUEST_TYPE_ID_FIELD.value,
+						'value' : reqTypeId
+					}],
+					this.LABEL_FIELD.value);
+		
+		//add the label and id for each What needed value that matches this Request type
+		while(gr.next()){
+			//pass it as an array of stringified json objects
+			values.push(JSON.stringify({
+				'label': gr.getValue(this.LABEL_FIELD.value),
+				'id'   : gr.getValue(this.ID_FIELD.value)
+			}));
+		}
+		//pass back a string representation of a json object containing the array
+		return '{"'+parameters.RETURN_NAME.value+'":['+values.toString()+']}';
+	}	
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-08 22:30:24</sys_created_on>
+        <sys_id>2056765ddbc1230007a2fe1ebf961940</sys_id>
+        <sys_mod_count>176</sys_mod_count>
+        <sys_name>GetWhatNeededValues</sys_name>
+        <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
+        <sys_update_name>sys_script_include_2056765ddbc1230007a2fe1ebf961940</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-12 22:51:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <conditions table="x_278456_needit_needit">u_request_type=^EQ<item endquery="false" field="u_request_type" goto="false" newquery="false" operator="=" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
@@ -24,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>be1d56d0db8da30007a2fe1ebf961904</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>NeedIt show or hide Other field</sys_name>
         <sys_overrides/>
         <sys_package display_value="Needit" source="x_278456_needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="Needit">6f8c4bd3dbf8230007a2fe1ebf961948</sys_scope>
         <sys_update_name>sys_ui_policy_be1d56d0db8da30007a2fe1ebf961904</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-05 18:16:52</sys_updated_on>
+        <sys_updated_on>2018-10-09 17:35:57</sys_updated_on>
         <table>x_278456_needit_needit</table>
         <ui_type>10</ui_type>
         <view/>
